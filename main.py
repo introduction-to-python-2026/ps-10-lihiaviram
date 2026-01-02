@@ -1,1 +1,5 @@
-
+my_image = load_image('dogphoto.jpg')
+final_edges = edge_detection(my_image)
+final_edges_normalized = (final_edges / final_edges.max() * 255).astype(np.uint8)
+edge_image = Image.fromarray(final_edges_normalized)
+edge_image.save('Newphoto.png')
