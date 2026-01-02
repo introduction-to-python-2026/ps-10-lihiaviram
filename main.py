@@ -12,4 +12,4 @@ threshold_value = 50
 edge_binary = final_edges > threshold_value
 binary_image_data = edge_binary.astype(np.uint8) * 255
 edge_image = Image.fromarray(binary_image_data )
-edge_image.save('Newphoto.png')
+edge_image.save('Newphoto.jpg')
