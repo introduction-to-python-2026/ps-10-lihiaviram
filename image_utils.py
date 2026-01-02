@@ -10,7 +10,7 @@ def load_image(path):
 
 def edge_detection(image):
     image_gray = np.mean(image, axis=2)
-    plt.imshow(image_gray, cmap='gray')
+    plt.imshow(image_gray, cmap='gray');
     kernelY= np.array([[1, 2, 1],[0, 0, 0],[-1, -2, -1]])
     kernelX= np.array([[1, 0, -1],[2, 0, -2],[1, 0, -1]])
     edgeX = convolve2d(image_gray, kernelX, mode='same', boundary='symm')
