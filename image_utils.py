@@ -4,8 +4,8 @@ import numpy as np
 from scipy.signal import convolve2d
 
 def load_image(path):
-   dog_path = 'dogphoto.jpg'
-   image=Image.open(dog_path)
+   image = Image.open(path)
+ #  image=Image.open(dog_path)
    image=np.array(image)
    return image
 
