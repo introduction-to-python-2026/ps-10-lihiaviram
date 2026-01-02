@@ -2,8 +2,6 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt  
 from scipy.signal import convolve2d
-from skimage.filters import median
-from skimage.morphology import ball
 
 def load_image(path):
    image=Image.open('dogphoto.jpg')
@@ -13,7 +11,6 @@ def load_image(path):
 def edge_detection(image):
     image_gray = np.mean(image, axis=2)
     plt.imshow(image_gray, cmap='gray');
-    clean_image = median(image_gray, ball(3))
     kernelY= np.array([[1, 2, 1],
                        [0, 0, 0],
                        [-1, -2, -1]])
